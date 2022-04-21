@@ -1,0 +1,23 @@
+apiVersion: core.oam.dev/v1alpha2
+kind: Component
+metadata:
+  name: __NAME__
+spec:
+  workload:
+    apiVersion: core.oam.dev/v1alpha2
+    kind: ContainerizedWorkload
+    metadata:
+      name: __NAME__
+    spec:
+      osType: linux
+      containers:
+        - name: __NAME__
+          securityContext:
+            runAsUser: 1001
+          image: __IMAGE__:__TAG__
+          imagePullPolicy: Always
+          ports:
+            - name: http
+              value: __PORT__
+              containerPort: __PORT__
+              type: tcp

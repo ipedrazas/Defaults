@@ -1,0 +1,28 @@
+apiVersion: core.oam.dev/v1alpha2
+kind: ApplicationConfiguration
+metadata:
+  name: __NAME__
+  annotations:
+    version: __VERSION__
+spec:
+  components:
+    - componentName: __NAME__
+      traits:
+        - trait:
+            apiVersion: core.napptive.com/v1alpha1
+            kind: Ingress
+            metadata:
+              name: __NAME__-ingress
+            spec:
+              name: __NAME__
+              protocol: HTTP
+              port: __PORT__
+              path: /
+              rewritePath: /
+        - trait:
+            apiVersion: core.oam.dev/v1alpha2
+            kind: ManualScalerTrait
+            metadata:
+              name: __NAME__
+            spec:
+              replicaCount: 1
