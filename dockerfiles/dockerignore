@@ -31,3 +31,5 @@ Makefile
 .drone.yml
 .circleci
 .github
+**/__pycache__
+**/.venv
