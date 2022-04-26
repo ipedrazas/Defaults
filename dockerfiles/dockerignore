@@ -33,3 +33,5 @@ Makefile
 .github
 **/__pycache__
 **/.venv
+gp/
+.gp/
