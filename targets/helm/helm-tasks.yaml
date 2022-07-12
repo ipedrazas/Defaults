@@ -11,7 +11,7 @@ services:
   populateValues:
     image: harbor.alacasa.uk/library/hvgen:v0.1.5-arm64
     volumes:
-      -  __WORKSPACE__/gp/targets/__TARGET_NAME__/target.yaml:/targets/target.yaml
+      - __WORKSPACE__/gp/targets/__TARGET_NAME__/target.yaml:/targets/target.yaml
       - __GP_ROOT_CONFIG__/config.yaml:/gp/config.yaml
       - __DATA__:/data
       - __WORKSPACE__:/workspace 
