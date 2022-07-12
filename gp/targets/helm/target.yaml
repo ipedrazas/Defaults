@@ -4,7 +4,7 @@ starter: common-starter
 platform: 
   - linux/amd64
 docker_build: false
-compose: helm.yaml
+compose: helm-tasks.yaml
 actions:
   - createChart
   - populateValues
