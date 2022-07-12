@@ -1,0 +1,11 @@
+name: __TARGET_NAME__
+type: helm
+starter: common-starter
+platform: 
+  - linux/amd64
+docker_build: false
+compose: helm.yaml
+actions:
+  - createChart
+  - populateValues
+dns: .k8s.alacasa.uk

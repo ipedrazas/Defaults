@@ -1,0 +1,8 @@
+name: __TARGET_NAME__
+docker_build: true
+platform: 
+  - linux/arm64
+  - linux/amd64
+allow_latest: false
+registry: __REGISTRY__
+registry_user: __REGISTRY_USER__
