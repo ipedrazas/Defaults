@@ -2,7 +2,7 @@ name: __TARGET_NAME__
 platform: 
   - linux/amd64
 docker_build: false
-compose: helm-tasks.yaml
+compose: helm-compose.yaml
 actions:
   - createChart
   - populateValues

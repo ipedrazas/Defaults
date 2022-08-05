@@ -1,7 +1,7 @@
 version: "3.9"
 services:
   createChart:
-    image: ipedrazas/k8s:v0.1.0
+    image: ipedrazas/k8s:v0.1.1
     volumes:
       - __WORKSPACE__:/workspace # workspace
       - __GP_ROOT_CONFIG__/defaults/k8s/helm/starters:/root/.local/share/helm/starters
@@ -9,7 +9,7 @@ services:
     command: ["sh", "-c", "helm create __NAME__ --starter common-starter"]
 
   populateValues:
-    image: harbor.alacasa.uk/library/hvgen:v0.1.8.2
+    image: harbor.alacasa.uk/library/hvgen:v0.1.9.3
     volumes:
       - __WORKSPACE__/gp/targets/__TARGET_NAME__/target.yaml:/targets/target.yaml
       - __GP_ROOT_CONFIG__/config.yaml:/gp/config.yaml
