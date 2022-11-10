@@ -8,7 +8,8 @@ metadata:
     {{- include "common.labels" . | nindent 4 }}
 data:
   {{- $files := .Files }}
-  {{- range tuple .Values.configmap.files }}
-  {{ . }}: |-
-        {{ $files.Get . }}
+  {{- range $cm := .Values.configmap }}
+  {{ $cm.filename }}: |-
+  
+{{ $files.Get $cm.path | indent 4 }}
   {{- end }}
