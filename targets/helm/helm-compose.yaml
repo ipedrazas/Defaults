@@ -11,6 +11,11 @@ services:
   populateValues:
     image: harbor.alacasa.uk/library/hgv:v0.1.11
     volumes:
-      - __WORKSPACE__/gp/targets/__TARGET_NAME__/target.yaml:/targets/target.yaml
       - __GP_ROOT_CONFIG__/config.yaml:/gp/config.yaml
       - __WORKSPACE__:/workspace 
+    command:
+      - python 
+      - /home/appuser/app/helm.py 
+      - .meta.yaml 
+      - gp/targets/__TARGET_NAME__/target.yaml
+      - gp/helm/__TARGET_NAME__/values.yaml
