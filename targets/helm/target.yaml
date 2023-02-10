@@ -8,4 +8,4 @@ compose: helm-compose.yaml
 actions:
   - createChart
   - populateValues
-dns: .k8s.alacasa.uk
+domain: .k8s.alacasa.uk
