@@ -5,7 +5,7 @@ services:
     volumes:
       - __WORKSPACE__:/workspace # workspace
       - __GP_ROOT_CONFIG__/defaults/k8s/helm/starters:/root/.local/share/helm/starters
-    working_dir: "/workspace/gp/helm"
+    working_dir: "/workspace/charts"
     command: ["sh", "-c", "helm create __NAME__ --starter common-starter"]
 
   populateValues:
@@ -19,4 +19,4 @@ services:
       - /home/appuser/app/helm.py 
       - .meta.yaml 
       - gp/targets/__TARGET_NAME__/target.yaml
-      - gp/helm/__NAME__/values.yaml
+      - charts/__NAME__/values.yaml
