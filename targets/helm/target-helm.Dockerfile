@@ -8,13 +8,11 @@ FROM harbor.alacasa.uk/library/hgv:v0.1.11 as values-builder
 
 WORKDIR /workspace
 
-COPY ./.meta.yaml /workspace/.meta.yaml
-COPY ./gp/targets/helm/target.yaml /targets/target.yaml
-COPY ./data /data
+COPY . .
 
 USER appuser
 
-RUN python /home/appuser/app/helm.py /workspace/.meta.yaml /targets/target.yaml /workspace/values.yaml
+RUN python /home/appuser/app/helm.py .meta.yaml gp/targets/helm/target.yaml values.yaml
 
 
 FROM scratch as result
