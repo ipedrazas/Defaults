@@ -2,6 +2,8 @@ name: __TARGET_NAME__
 platform: 
   - linux/amd64
 docker_build: false
+registry: harbor.alacasa.uk
+registry_user: library
 compose: helm-compose.yaml
 actions:
   - createChart
