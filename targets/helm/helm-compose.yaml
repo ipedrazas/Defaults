@@ -13,5 +13,4 @@ services:
     volumes:
       - __WORKSPACE__/gp/targets/__TARGET_NAME__/target.yaml:/targets/target.yaml
       - __GP_ROOT_CONFIG__/config.yaml:/gp/config.yaml
-      - __DATA__:/data
       - __WORKSPACE__:/workspace 
