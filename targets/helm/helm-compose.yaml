@@ -6,7 +6,7 @@ services:
       - __WORKSPACE__:/workspace # workspace
       - __GP_ROOT_CONFIG__/defaults/k8s/helm/starters:/root/.local/share/helm/starters
     working_dir: "/workspace/charts"
-    command: ["sh", "-c", "helm create __NAME__ --starter common-starter"]
+    command: ["sh", "-c", "helm create __NAME__--common --starter common-starter"]
 
   populateValues:
     image: harbor.alacasa.uk/library/hvg:v0.1.18
