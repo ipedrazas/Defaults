@@ -19,4 +19,4 @@ services:
       - /home/appuser/app/helm-default.py 
       - .meta.yaml 
       - gp/targets/__TARGET_NAME__/target.yaml
-      - charts/__NAME__/values.yaml
+      - charts/__NAME__--default/values.yaml
