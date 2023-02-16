@@ -9,7 +9,7 @@ services:
     command: ["sh", "-c", "helm create __NAME__ --starter common-starter"]
 
   populateValues:
-    image: harbor.alacasa.uk/library/hgv:v0.1.11
+    image: harbor.alacasa.uk/library/hgv:v0.1.18
     volumes:
       - __GP_ROOT_CONFIG__/config.yaml:/gp/config.yaml
       - __WORKSPACE__:/workspace
