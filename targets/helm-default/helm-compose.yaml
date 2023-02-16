@@ -16,7 +16,7 @@ services:
     working_dir: "/workspace"
     command:
       - python 
-      - /home/appuser/app/helm-defaultg.py 
+      - /home/appuser/app/helm-default.py 
       - .meta.yaml 
       - gp/targets/__TARGET_NAME__/target.yaml
       - charts/__NAME__/values.yaml
