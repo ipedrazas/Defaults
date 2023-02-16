@@ -1,0 +1,14 @@
+version: "3.9"
+services:
+  createCompose:
+    image: harbor.alacasa.uk/library/hvg:v0.1.18
+    volumes:
+      - __GP_ROOT_CONFIG__/config.yaml:/gp/config.yaml
+      - __WORKSPACE__:/workspace
+    working_dir: "/workspace"
+    command:
+      - python 
+      - /home/appuser/app/compose.py 
+      - .meta.yaml 
+      - gp/targets/__TARGET_NAME__/target.yaml
+      - docker-compose.yaml
