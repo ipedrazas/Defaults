@@ -1,7 +1,7 @@
 version: "3.9"
 services:
   createCompose:
-    image: harbor.alacasa.uk/library/hvg:v0.1.18
+    image: harbor.alacasa.uk/library/hvg:v0.1.19
     volumes:
       - __GP_ROOT_CONFIG__/config.yaml:/gp/config.yaml
       - __WORKSPACE__:/workspace
