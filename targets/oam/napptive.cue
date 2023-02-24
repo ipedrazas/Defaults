@@ -1,3 +1,5 @@
+package oam
+
 OAM: {
 	apiVersion: "core.oam.dev/v1beta1"
 	kind:       "Application"
