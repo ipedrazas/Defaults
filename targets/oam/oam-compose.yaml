@@ -4,10 +4,5 @@ services:
     image: harbor.alacasa.uk/library/k8stools:latest
     volumes:
       - __WORKSPACE__:/workspace # workspace
-      - __GP_ROOT_CONFIG__/defaults/k8s/helm/starters:/root/.local/share/helm/starters
-    working_dir: "/workspace/oam"
-    command: 
-      - cue import .meta.yaml -l '"d2"' -o meta.cue
-      - cue import gp/targets/oam/target.yaml -l '"target"' -o target.cue
-      - cat meta.cue target.cue gp/targets/oam/napptive.cue > final.cue
-      - cue export final.cue --out yaml  -e OAM -o oam.yaml
+    working_dir: "/workspace"
+    command: ["/workspace/gp/targets/oam/process.sh"]
