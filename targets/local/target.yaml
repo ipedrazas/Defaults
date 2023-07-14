@@ -6,3 +6,6 @@ platform:
 allow_latest: false
 registry: __REGISTRY__
 registry_user: __REGISTRY_USER__
+compose: docker-compose.yaml
+actions:
+  - createCompose

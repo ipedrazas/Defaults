@@ -1,0 +1,8 @@
+version: "3.9"
+services:
+  createOAM:
+    image: harbor.alacasa.uk/library/k8stools:oam
+    volumes:
+      - __WORKSPACE__:/workspace # workspace
+    working_dir: "/workspace"
+    command: ["/home/appuser/scripts/d2-target-oam.sh"]

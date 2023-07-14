@@ -1,0 +1,10 @@
+name: __TARGET_NAME__
+platform: 
+  - linux/amd64
+docker_build: false
+registry: harbor.alacasa.uk
+registry_user: library
+compose: oam-compose.yaml
+actions:
+  - createOAM
+domain: .k8s.alacasa.uk
