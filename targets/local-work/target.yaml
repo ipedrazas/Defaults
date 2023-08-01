@@ -1,12 +1,12 @@
-name: __TARGET_NAME__
+name: local-work
 docker_build: true
 platform: 
   - linux/arm64
   - linux/amd64
 allow_latest: false
-registry: harbor.alacasa.uk
-registry_user: library
+registry: docker.io 
+registry_user: ivanpedrazas
 compose: docker-compose.yaml
-push: false
+push: true
 actions:
   - createCompose

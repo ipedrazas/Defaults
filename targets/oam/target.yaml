@@ -1,4 +1,4 @@
-name: __TARGET_NAME__
+name: oam
 platform: 
   - linux/amd64
 docker_build: false
